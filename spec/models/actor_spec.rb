@@ -38,4 +38,11 @@ RSpec.describe Actor, type: :model do
       expect(Actor.search(@actor_3.name).first.name).to eq("Tom Arnold")
     end
   end
+
+  describe '::other_actors' do
+    it 'returns the names of other actors that a particular actor has acted with' do
+      actors = [@actor_2, @actor_3]
+      expect(Actor.other_actors).to eq(actors)
+    end
+  end
 end
