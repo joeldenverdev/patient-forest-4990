@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2021_12_14_204153) do
   create_table "actor_movies", force: :cascade do |t|
     t.bigint "movie_id"
     t.bigint "actor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["actor_id"], name: "index_actor_movies_on_actor_id"
     t.index ["movie_id"], name: "index_actor_movies_on_movie_id"
   end
