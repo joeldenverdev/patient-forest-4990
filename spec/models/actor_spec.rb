@@ -32,4 +32,10 @@ RSpec.describe Actor, type: :model do
       expect(@movie_1.actors.average_age).to eq(68)
     end
   end
+
+  describe '::search' do
+    it 'finds an actor by name in the database' do
+      expect(Actor.search(@actor_3.name).first.name).to eq("Tom Arnold")
+    end
+  end
 end
