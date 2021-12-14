@@ -1,3 +1,7 @@
 <%= @studios.each do |studio| %>
-  studio.name
+  <%= studio.name %>
+  <%= studio.location %>
+  <%= studio.movies.each do |movie| %>
+    <%= movie.title %>
+  <% end %>
 <% end %>
