@@ -39,10 +39,10 @@ RSpec.describe Actor, type: :model do
     end
   end
 
-  describe '::other_actors' do
+  xdescribe '::other_actors' do
     it 'returns the names of other actors that a particular actor has acted with' do
       actors = [@actor_2, @actor_3]
-      expect(Actor.other_actors).to eq(actors)
+      expect(Actor.other_actors(@actor_1.name)).to eq(actors)
     end
   end
 end

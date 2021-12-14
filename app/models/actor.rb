@@ -13,4 +13,8 @@ class Actor < ApplicationRecord
   def self.search(search_params)
     where("name ILIKE ?", "%#{search_params}%")
   end
+
+  # def self.other_actors(name)
+  #   joins(:movies).where(:name => name )
+  # end
 end
