@@ -25,8 +25,8 @@ RSpec.describe 'movies show page' do
     end
 
     it 'includes a list of actors from youngest to oldest' do
-      expect(@actor_2).to appear_before(@actor_3)
-      expect(@actor_3).to appear_before(@actor_1)
+      expect(@actor_2.name).to appear_before(@actor_3.name)
+      expect(@actor_3.name).to appear_before(@actor_1.name)
     end
 
     it 'shows the average age of all the movies actors' do
