@@ -1,0 +1,10 @@
+<%= @movies.each do |movie| %>
+  <p><%= movie.title %></p>
+  <p><%= movie.creation_year %></p>
+  <p><%= movie.genre %></p>
+  <%= movie.actors.order_by_age.each do |actor| %>
+    <p><%= actor.name %></p>
+  <% end %>
+
+  <p><%= "Average Age of Actors: #{movie.actors.average_age}" %></p>
+<% end %>
